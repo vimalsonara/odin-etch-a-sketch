@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
     <title>Etch-a-Sketch</title>
 </head>
 <body>
     <h1 id="heading">Sketch Pad</h1>
     <div id="container">
-        
     </div>
-    <script src="script.js" defer></script>
+    <div class="tool">
+        <div class="button"></div>
+            <button id="random-btn" onclick="changeColor('random')">Random</button>
+            <button id="black" onclick="changeColor('black')">Black</button>
+            <button onclick="changeColor('white')">Eraser</button>
+            <button onclick="resetGrid()">Reset</button>
+        </div>
+        <div class="size">
+            <input type="text" placeholder="size of grid" value="16" onchange="changeSize(this.value)">
+            <button>Set Size</button>
+        </div>
+    </div>
 </body>
 </html>
